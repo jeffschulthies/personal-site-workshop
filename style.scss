@@ -1,0 +1,135 @@
+/*********************************
+ * Personal-Website-Tutorial Stylesheet
+ * Jeff Schulthies
+ * Updated: 2016-09-27
+ *********************************/
+
+/* Font Information */
+$font: "Not-Roman";
+$light: 100;
+$normal: 200;
+$semi-bold: 200;
+$bold: bold;
+
+/* Color Palette */
+$blue: #00C9F1;
+$gray: #F0F0F0;
+
+/* Custom Mixins */
+@mixin font-face($weight, $size) {
+    font-family: $font;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+/******************** General Elements ********************/
+* {
+    /*
+     *  Block displays makes it easier to us style elements.
+     *  Every element becomes a box.
+     *  https://mdn.mozillademos.org/files/13647/box-model-standard-small.png
+     */
+    display: block;
+}
+
+/* Main Container */
+body {
+    // The body contains everything visible in the page.
+    @include font-face($light, 16px); // Specifies the default font.
+    color: #gray; // Specifies the default font color.
+    overflow-x: hidden;
+    background-color: $blue;
+    background-image: url("./images/bg.png");
+    background-size: cover;
+    background-position: 75% 105px, bottom;
+    background-repeat: no-repeat;
+}
+
+/* Container for the navigation bar(navbar). */
+header {
+    height: 75px;
+    width: 100%;
+    position: relative;
+    float:right;
+    padding-bottom: 25px;
+
+    /* nav bar */
+    nav#nav-top {
+        position: absolute; // This positions it in an absolute location w.r.t. its container.
+        right: 0;
+        // CSS Selectors used to style the links within the navbar.
+        a {
+            @include font-face($bold, 20px) ;
+            float: left;
+            padding: {
+                left: 10px;
+                right: 10px;
+            }
+        }
+    }
+}
+
+/* Profile Picture Style */
+div#profile-picture-wrapper {
+    height: 400px;
+    position: relative;
+    clear: both;
+    text-align: center;
+    max-width: 100%;
+
+    div#profile-picture {
+        clear: both;
+        height: inherit;
+        width: inherit;
+        max-width: 100%;
+        display: inline-block;
+        img {
+            max-width:100%;
+            max-height:100%;
+            border-radius: 900px;
+        }
+    }
+}
+
+/* Biography Container */
+div#bio-wrapper {
+    height: 250px;
+    position: relative;
+    clear: both;
+    text-align: center;
+
+    div#bio {
+        padding: {
+            top: 15px;
+        }
+        display: inline-block;
+    }
+}
+
+/* Footer */
+footer {
+    position:relative;
+    height: 30px;
+    width: 100%;
+    margin-top: -15px;
+    overflow-y: hidden;
+    nav#nav-bottom {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        a {
+            @include font-face($normal, 20px) ;
+            float: left;
+            padding: {
+                left: 10px;
+                right: 10px;
+            }
+            &:last-of-type {
+                padding: {
+                    right: 20px;
+                }
+            }
+        }
+    }
+}
