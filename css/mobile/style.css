@@ -1,0 +1,202 @@
+/*********************************
+ * Personal-Website-Tutorial Main Stylesheet
+ * Jeff Schulthies
+ * Updated: 2016-09-27
+ *********************************/
+/*********************************
+ * Personal-Website-Tutorial Base Stylesheet
+ * Jeff Schulthies
+ * Updated: 2016-09-27
+ *********************************/
+/* TODO Switch to vw and vh */
+/* Font Information */
+/* Color Palette */
+/* Variables */
+/* Custom Mixins */
+/******************** General Elements ********************/
+*, html {
+  /*
+   *  Block displays makes it easier to us style elements.
+   *  Every element becomes a box.
+   *  https://mdn.mozillademos.org/files/13647/box-model-standard-small.png
+   */
+  display: block;
+  font-size: 12px; }
+
+/* Reset table displays */
+table {
+  display: table;
+  font-family: "Not-Roman";
+  font-weight: 100;
+  font-size: 16px; }
+
+tr {
+  display: table-row; }
+
+td {
+  display: table-cell; }
+  td:first-child {
+    font-family: "Not-Roman";
+    font-weight: bold;
+    font-size: 16px;
+    padding-right: 25px; }
+
+script {
+  display: none; }
+
+a {
+  text-decoration: none; }
+
+/* Main Container */
+body {
+  font-family: "Not-Roman";
+  font-weight: 100;
+  font-size: 8px;
+  color: #FFFFFF;
+  overflow-x: hidden;
+  background-color: #00C9F1;
+  background-image: url("./../../images/bg.png");
+  background-size: cover;
+  background-position: 75% 105px, bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+/* Container for the navigation bar(navbar). */
+header {
+  top: 0;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 1000;
+  /* nav bar */ }
+  header nav#nav-top {
+    position: relative;
+    float: right;
+    padding-right: 10px;
+    transition: .2s;
+    background-color: #AAAAAA;
+    border-radius: 5px; }
+    header nav#nav-top a {
+      font-family: "Not-Roman";
+      font-weight: bold;
+      font-size: 1.5rem;
+      float: left;
+      text-decoration: none;
+      color: inherit;
+      padding-left: 10px;
+      padding-right: 10px; }
+      header nav#nav-top a:hover {
+        color: #FFC31C;
+        transition: .2s; }
+
+.content-container {
+  padding-top: 50px;
+  overflow: hidden;
+  width: 100%;
+  height: calc(100vh - 90px); }
+
+/* Footer */
+footer {
+  position: relative;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  margin-top: 0px;
+  overflow-y: hidden; }
+  footer nav#nav-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    footer nav#nav-bottom a {
+      font-family: "Not-Roman";
+      font-weight: 200;
+      font-size: 1rem;
+      float: left;
+      text-decoration: none;
+      color: inherit;
+      padding-left: 10px;
+      padding-right: 10px; }
+      footer nav#nav-bottom a:last-of-type {
+        padding-right: 20px; }
+      footer nav#nav-bottom a:hover {
+        color: #FFC31C;
+        transition: .2s; }
+
+/******************** General Elements ********************/
+/* Name Container */
+/*div#name-wrapper {
+    @include font-face($bold, 26px); // Specifies the default font.
+    position: relative;
+    clear: both;
+    text-align: center;
+    max-height: 10vh;
+    min-height: 10vh;
+    width: 100%;
+    padding: {
+        bottom: 15px;
+    }
+
+    div#name {
+        display: inline-block;
+    }
+}
+*/
+/* Profile Picture Style */
+div#profile-picture-wrapper {
+  height: calc(40vh - 50px);
+  max-height: 60vh;
+  position: relative;
+  clear: both;
+  text-align: center;
+  /* Transition to Desktop CSS */ }
+  div#profile-picture-wrapper div#profile-picture {
+    max-width: 60vh;
+    height: inherit;
+    display: inline-block; }
+    div#profile-picture-wrapper div#profile-picture img {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 900px; }
+
+/* Name Container */
+div#name-wrapper {
+  position: relative;
+  padding-top: 15;
+  margin-top: 15px;
+  height: calc(20vh - 20px);
+  min-height: 10vh;
+  max-height: 200vw;
+  width: 100%;
+  text-align: center;
+  clear: both;
+  overflow: hidden;
+  /* TODO Fix font with jquery */ }
+  div#name-wrapper div#name {
+    font-family: "Not-Roman";
+    font-weight: 200;
+    font-size: 5vh; }
+  div#name-wrapper div#description {
+    font-family: "Not-Roman";
+    font-weight: 100;
+    font-size: 3.5vh; }
+
+/* Bio Container */
+div#bio-wrapper {
+  position: relative;
+  height: calc(15vh - 50px);
+  min-height: 10vh;
+  max-height: 200vw;
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+  clear: both;
+  overflow: hidden;
+  /* TODO Fix font with jquery */ }
+  div#bio-wrapper div#bio {
+    font-family: "Not-Roman";
+    font-weight: 100;
+    font-size: 3vh; }
+
+/*# sourceMappingURL=style.css.map */

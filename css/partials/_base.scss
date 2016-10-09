@@ -4,6 +4,7 @@
  * Updated: 2016-09-27
  *********************************/
 
+/* TODO Switch to vw and vh */
 /* Font Information */
 $font: "Not-Roman";
 $light: 100;
@@ -13,7 +14,11 @@ $bold: bold;
 
 /* Color Palette */
 $blue: #00C9F1;
-$gray: #F0F0F0;
+$white: #FFFFFF;
+$yellow: #F7E154;
+
+/* Variables */
+$header-height: 50px;
 
 /* Custom Mixins */
 @mixin font-face($weight, $size) {
@@ -23,58 +28,109 @@ $gray: #F0F0F0;
 }
 
 /******************** General Elements ********************/
-* {
+*, html {
     /*
      *  Block displays makes it easier to us style elements.
      *  Every element becomes a box.
      *  https://mdn.mozillademos.org/files/13647/box-model-standard-small.png
      */
     display: block;
+    font-size: 16px;
+}
+
+/* Reset table displays */
+table {
+    display: table;
+    @include font-face($light, 16px); // Specifies the default font.
+
+}
+
+tr {
+    display: table-row;
+}
+
+td {
+    &:first-child {
+        @include font-face($bold, 16px); // Specifies the default font.
+        padding-right: 20px;
+    }
+    display: table-cell;
+}
+
+script {
+    display: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Main Container */
 body {
     // The body contains everything visible in the page.
     @include font-face($light, 16px); // Specifies the default font.
-    color: #gray; // Specifies the default font color.
+    color: $white; // Specifies the default font color.
     overflow-x: hidden;
     background-color: $blue;
-    background-image: url("./images/bg.png");
+    background-image: url("./../../images/bg.png");
     background-size: cover;
     background-position: 75% 105px, bottom;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 /* Container for the navigation bar(navbar). */
 header {
-    height: 75px;
+    top: 0;
     width: 100%;
-    position: relative;
-    float:right;
-    padding-bottom: 25px;
+    height: $header-height;
+    position: fixed;
+    z-index: 1000;
 
     /* nav bar */
     nav#nav-top {
-        position: absolute; // This positions it in an absolute location w.r.t. its container.
-        right: 0;
+        position: relative; // This positions it in an absolute location w.r.t. its container.
+        float:right;
+        padding-right: 10px;
+        transition:.2s;
+        z-index: 1000; // Makes sures the nav is always on top.
+        background-color: #AAAAAA;
+        border-radius: 5px;
+
         // CSS Selectors used to style the links within the navbar.
         a {
-            @include font-face($bold, 20px) ;
+            @include font-face($bold, 1.5rem) ;
+            opacity: 1;
             float: left;
+            text-decoration: none;
+            color: inherit;
             padding: {
                 left: 10px;
                 right: 10px;
+            }
+            &:hover {
+                color: $yellow;
+                transition:.2s;
             }
         }
     }
 }
 
+.content-container {
+    padding-top: $header-height;
+    overflow: hidden;
+    width: 100%;
+    // height: 90%;
+    height: calc(100vh - 100px);
+}
+
 /* Footer */
 footer {
     position:relative;
-    height: 30px;
+    bottom: 0;
+    height: 40px;
     width: 100%;
-    margin-top: -15px;
+    margin-top: 0px;
     overflow-y: hidden;
     nav#nav-bottom {
         position: absolute;
@@ -82,8 +138,11 @@ footer {
         bottom: 0;
 
         a {
-            @include font-face($normal, 20px) ;
+            @include font-face($normal, 1rem) ;
             float: left;
+            text-decoration: none;
+            color: inherit;
+
             padding: {
                 left: 10px;
                 right: 10px;
@@ -92,6 +151,10 @@ footer {
                 padding: {
                     right: 20px;
                 }
+            }
+            &:hover {
+                color: $yellow;
+                transition:.2s;
             }
         }
     }

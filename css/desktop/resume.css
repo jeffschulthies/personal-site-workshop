@@ -1,0 +1,279 @@
+/*********************************
+ * Personal-Website-Tutorial Desktop Resume Stylesheet
+ * Jeff Schulthies
+ * Updated: 2016-10-08
+ *********************************/
+/*********************************
+ * Personal-Website-Tutorial Base Stylesheet
+ * Jeff Schulthies
+ * Updated: 2016-09-27
+ *********************************/
+/* TODO Switch to vw and vh */
+/* Font Information */
+/* Color Palette */
+/* Variables */
+/* Custom Mixins */
+/******************** General Elements ********************/
+*, html {
+  /*
+   *  Block displays makes it easier to us style elements.
+   *  Every element becomes a box.
+   *  https://mdn.mozillademos.org/files/13647/box-model-standard-small.png
+   */
+  display: block;
+  font-size: 16px; }
+
+/* Reset table displays */
+table {
+  display: table;
+  font-family: "Not-Roman";
+  font-weight: 100;
+  font-size: 16px; }
+
+tr {
+  display: table-row; }
+
+td {
+  display: table-cell; }
+  td:first-child {
+    font-family: "Not-Roman";
+    font-weight: bold;
+    font-size: 16px;
+    padding-right: 20px; }
+
+script {
+  display: none; }
+
+a {
+  text-decoration: none; }
+
+/* Main Container */
+body {
+  font-family: "Not-Roman";
+  font-weight: 100;
+  font-size: 16px;
+  color: #FFFFFF;
+  overflow-x: hidden;
+  background-color: #00C9F1;
+  background-image: url("./../../images/bg.png");
+  background-size: cover;
+  background-position: 75% 105px, bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+/* Container for the navigation bar(navbar). */
+header {
+  top: 0;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 1000;
+  /* nav bar */ }
+  header nav#nav-top {
+    position: relative;
+    float: right;
+    padding-right: 10px;
+    transition: .2s;
+    z-index: 1000;
+    background-color: #AAAAAA;
+    border-radius: 5px; }
+    header nav#nav-top a {
+      font-family: "Not-Roman";
+      font-weight: bold;
+      font-size: 1.5rem;
+      opacity: 1;
+      float: left;
+      text-decoration: none;
+      color: inherit;
+      padding-left: 10px;
+      padding-right: 10px; }
+      header nav#nav-top a:hover {
+        color: #F7E154;
+        transition: .2s; }
+
+.content-container {
+  padding-top: 50px;
+  overflow: hidden;
+  width: 100%;
+  height: calc(100vh - 100px); }
+
+/* Footer */
+footer {
+  position: relative;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  margin-top: 0px;
+  overflow-y: hidden; }
+  footer nav#nav-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    footer nav#nav-bottom a {
+      font-family: "Not-Roman";
+      font-weight: 200;
+      font-size: 1rem;
+      float: left;
+      text-decoration: none;
+      color: inherit;
+      padding-left: 10px;
+      padding-right: 10px; }
+      footer nav#nav-bottom a:last-of-type {
+        padding-right: 20px; }
+      footer nav#nav-bottom a:hover {
+        color: #F7E154;
+        transition: .2s; }
+
+body {
+  background-color: #32017f; }
+
+/* Modified from the base */
+.content-container {
+  overflow-y: scroll; }
+
+.left {
+  margin-left: 25px;
+  float: left; }
+
+.right {
+  float: right;
+  margin-right: 25px; }
+
+.title {
+  height: 50px;
+  width: 165px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 25px; }
+  .title div#text-contact {
+    border-radius: 5px;
+    padding-left: 9px;
+    padding-top: 5px;
+    width: 130px;
+    color: #ff71fc;
+    background-color: #3ffca2;
+    font-size: 30px;
+    font-weight: bold; }
+    .title div#text-contact:hover {
+      color: #3ffca2;
+      background-color: #ff71fc; }
+  .title div#text-education {
+    background-color: #6ca0d6;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: #f0cf45;
+    font-size: 30px;
+    font-weight: bold; }
+    .title div#text-education:hover {
+      color: #6ca0d6;
+      background-color: #f0cf45; }
+  .title div#text-computer {
+    border-radius: 5px;
+    padding-left: 9px;
+    padding-top: 5px;
+    width: 242px;
+    color: #a9d0ea;
+    background-color: #e13641;
+    font-size: 30px;
+    font-weight: bold; }
+    .title div#text-computer:hover {
+      color: #e13641;
+      background-color: #a9d0ea; }
+  .title div#text-experience {
+    border-radius: 5px;
+    padding-left: 9px;
+    padding-top: 5px;
+    width: 172px;
+    color: #fdfeef;
+    background-color: #231f20;
+    font-size: 30px;
+    font-weight: bold; }
+    .title div#text-experience:hover {
+      color: #231f20;
+      background-color: #fdfeef; }
+  .title div#text-organizations {
+    border-radius: 5px;
+    padding-left: 9px;
+    padding-top: 5px;
+    width: 215px;
+    color: #42b350;
+    background-color: #93d9dc;
+    font-size: 30px;
+    font-weight: bold; }
+    .title div#text-organizations:hover {
+      color: #93d9dc;
+      background-color: #42b350; }
+
+.timeline {
+  display: inline-block;
+  font-weight: bold;
+  width: 25%; }
+
+.content-row {
+  margin-left: 25px;
+  width: 100%; }
+  .content-row .content {
+    display: inline-block;
+    vertical-align: top;
+    width: 65%; }
+    .content-row .content div#company {
+      display: inline-block;
+      font-weight: bold;
+      width: 100%; }
+    .content-row .content div#position {
+      display: inline-block;
+      font-weight: 200;
+      width: 100%; }
+    .content-row .content ul#responsibilities {
+      margin-top: 0px; }
+      .content-row .content ul#responsibilities li {
+        margin-left: -10px; }
+        .content-row .content ul#responsibilities li:before {
+          content: "\f00a";
+          /* FontAwesome Unicode */
+          font-family: 'Fun'; }
+
+div#resume-wrapper {
+  height: calc(100% - $vertical-spacer);
+  position: relative;
+  padding-top: 25px; }
+  div#resume-wrapper div#resume-header {
+    /* height + title margins*/
+    height: 150px;
+    border-bottom-color: #F7E154;
+    border-bottom-style: solid;
+    border-bottom-width: 3px; }
+    div#resume-wrapper div#resume-header div#name {
+      font-size: 22px; }
+    div#resume-wrapper div#resume-header div#address {
+      font-size: 16px; }
+    div#resume-wrapper div#resume-header div#phone {
+      font-size: 16px; }
+    div#resume-wrapper div#resume-header div#email {
+      font-size: 16px; }
+  div#resume-wrapper div#education {
+    height: 130px;
+    border-bottom-color: #F7E154;
+    border-bottom-style: solid;
+    border-bottom-width: 3px; }
+    div#resume-wrapper div#education div#college {
+      height: inherit;
+      margin-left: 25px; }
+  div#resume-wrapper div#computer-skills {
+    height: 230px;
+    border-bottom-color: #F7E154;
+    border-bottom-style: solid;
+    border-bottom-width: 3px; }
+    div#resume-wrapper div#computer-skills div#skills {
+      margin-left: 25px; }
+  div#resume-wrapper div#experience {
+    border-bottom-color: #F7E154;
+    border-bottom-style: solid;
+    border-bottom-width: 3px; }
+  div#resume-wrapper div#organizations {
+    border-bottom-color: #F7E154;
+    border-bottom-style: solid;
+    border-bottom-width: 3px; }
+
+/*# sourceMappingURL=resume.css.map */

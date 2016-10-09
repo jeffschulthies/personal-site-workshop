@@ -1,0 +1,38 @@
+/*********************************
+ * Personal-Website-Tutorial Desktop About Stylesheet
+ * Jeff Schulthies
+ * Updated: 2016-10-08
+ *********************************/
+
+ @import './../partials/_base';
+
+body {
+    background-color: $blue;
+    background-image: url("./../../images/blossoms.jpg");
+    background-size: cover;
+    background-position: 75% 0px, bottom;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+div#hi-wrapper {
+    padding-top: 300px;
+    div#hi {
+        font-size: 150pt;
+        letter-spacing: -18px;
+        font-weight: $bold;
+        color: $yellow;
+        text-shadow: 2px 2px 3px #444;
+        line-height: 70%;
+    }
+    div#bio {
+        margin-top: 30px;
+        font-size: 50;
+        font-weight: $bold;
+        color: $yellow;
+        text-shadow: 2px 2px 3px #444;
+        line-height: 70%;
+    }
+
+}

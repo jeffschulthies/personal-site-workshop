@@ -1,43 +1,103 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-        <script src="https://use.fortawesome.com/31252d2b.js"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" type="text/css" media="(min-width: 600px)" href="./css/desktop/style.css">
+        <link rel="stylesheet" type="text/css" media="(min-width: 0px) and (max-width: 599px)" href="./css/mobile/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="./images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+        <script async="true" src="https://use.fortawesome.com/31252d2b.js"></script>
     </head>
     <body>
         <header>
             <nav id="nav-top">
-                <a>about</a>
-                <a>projects</a>
-                <a>resume</a>
+                <a href="#">home</a>
+                <a href="./pages/about.html">about</a>
+                <a href="http://by.jeffs.io/" target="_blank">blog</a>
+                <a href="./pages/resume.html">résumé</a>
             </nav>
         </header>
 
-        <div id="background">
-
-        </div>
-
-        <div id="profile-picture-wrapper">
-            <div id="profile-picture">
-                <img src="./images/jeff-glasses-gif.gif">
+        <div class="content-container">
+            <!-- TODO Demonstrate Jquery -->
+            <div id="name-wrapper">
+                <div id="name">
+                    Jeff Schulthies
+                </div>
+                <div id="description">
+                    Student
+                </div>
             </div>
-        </div>
+            <div id="profile-picture-wrapper">
+                <div id="profile-picture">
+                    <img src="./images/jeff-glasses-gif.gif">
+                </div>
+            </div>
+            <div id="bio-wrapper">
+                <div id="bio">
 
-        <div id="bio-wrapper">
-            <div id="bio">
-                <p>
-                    Welcome to this tutorial. </br>
-                    We're going to make a cool website.
-                </p>
+                </div>
             </div>
         </div>
 
         <footer>
             <nav id="nav-bottom">
-                <a>Facebook</a>
-                <a>Twitter</a>
-                <a>Github</a>
-                <a>LinkedIn</a>
+                <a href="https://www.facebook.com/jeff.schulthies.71" target="_blank"><i class="fa fa-facebook-official fa-2x"></i></a>
+                <a href="https://twitter.com/CurtisRosseau" target="_blank"><i class="fa fa-twitter-box fa-2x"></i></a>
+                <a href="https://github.com/jeffschulthies" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/jeffschulthies" target="_blank"><i class="fa fa-linkedin-box fa-2x"></i></a>
             </nav>
         </footer>
+
+        <!-- Use Modernizr to determine support -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+        <script type="text/javascript">
+            window.onload = function() {
+                $(function(){
+                    $("#bio").typed({
+                        strings: ["^1000computer scientist student at gwu"],
+                        typeSpeed: 75,
+                        showCursor: false,
+                    });
+                });
+            };
+        </script>
+        <script type="text/javascript">
+          var _sf_async_config = { uid: 64435, domain: 'jeffs.io', useCanonical: true };
+          (function() {
+            function loadChartbeat() {
+              window._sf_endpt = (new Date()).getTime();
+              var e = document.createElement('script');
+              e.setAttribute('language', 'javascript');
+              e.setAttribute('type', 'text/javascript');
+              e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+              document.body.appendChild(e);
+            };
+            var oldonload = window.onload;
+            window.onload = (typeof window.onload != 'function') ?
+              loadChartbeat : function() { oldonload(); loadChartbeat(); };
+          })();
+        </script>
     </body>
 </html>

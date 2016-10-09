@@ -1,0 +1,159 @@
+/*********************************
+ * Personal-Website-Tutorial Base Stylesheet
+ * Jeff Schulthies
+ * Updated: 2016-09-27
+ *********************************/
+
+/* TODO Switch to vw and vh */
+/* Font Information */
+$font: "Not-Roman";
+$light: 100;
+$normal: 200;
+$semi-bold: 200;
+$bold: bold;
+
+/* Color Palette */
+$blue: #00C9F1;
+$white: #FFFFFF;
+$yellow: #FFC31C;
+
+/* Variables */
+$header-height: 50px;
+
+/* Custom Mixins */
+@mixin font-face($weight, $size) {
+    font-family: $font;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+/******************** General Elements ********************/
+*, html {
+    /*
+     *  Block displays makes it easier to us style elements.
+     *  Every element becomes a box.
+     *  https://mdn.mozillademos.org/files/13647/box-model-standard-small.png
+     */
+    display: block;
+    font-size: 12px;
+}
+
+/* Reset table displays */
+table {
+    display: table;
+    @include font-face($light, 16px); // Specifies the default font.
+
+}
+
+tr {
+    display: table-row;
+}
+
+td {
+    &:first-child {
+        @include font-face($bold, 16px); // Specifies the default font.
+        padding-right: 25px;
+
+    }
+    display: table-cell;
+}
+
+script {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Main Container */
+body {
+    // The body contains everything visible in the page.
+    @include font-face($light, 8px); // Specifies the default font.
+    color: $white; // Specifies the default font color.
+    overflow-x: hidden;
+    background-color: $blue;
+    background-image: url("./../../images/bg.png");
+    background-size: cover;
+    background-position: 75% 105px, bottom;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Container for the navigation bar(navbar). */
+header {
+    top: 0;
+    width: 100%;
+    height: $header-height;
+    position: fixed;
+    z-index: 1000;
+    /* nav bar */
+    nav#nav-top {
+        position: relative; // This positions it in an absolute location w.r.t. its container.
+        float:right;
+        padding-right: 10px;
+        transition:.2s;
+        background-color: #AAAAAA;
+        border-radius: 5px;
+
+        // CSS Selectors used to style the links within the navbar.
+        a {
+            @include font-face($bold, 1.5rem) ;
+            float: left;
+            text-decoration: none;
+            color: inherit;
+            padding: {
+                left: 10px;
+                right: 10px;
+            }
+            &:hover {
+                color: $yellow;
+                transition:.2s;
+            }
+        }
+    }
+}
+
+.content-container {
+    padding-top: $header-height;
+    overflow: hidden;
+    width: 100%;
+    // height: 90%;
+    height: calc(100vh - 90px);
+}
+
+/* Footer */
+footer {
+    position:relative;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    margin-top: 0px;
+    overflow-y: hidden;
+    nav#nav-bottom {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        a {
+            @include font-face($normal, 1rem) ;
+            float: left;
+            text-decoration: none;
+            color: inherit;
+
+            padding: {
+                left: 10px;
+                right: 10px;
+            }
+            &:last-of-type {
+                padding: {
+                    right: 20px;
+                }
+            }
+            &:hover {
+                color: $yellow;
+                transition:.2s;
+            }
+        }
+    }
+}
