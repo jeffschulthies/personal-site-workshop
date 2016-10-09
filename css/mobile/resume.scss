@@ -1,0 +1,252 @@
+/*********************************
+ * Personal-Website-Tutorial Desktop Resume Stylesheet
+ * Jeff Schulthies
+ * Updated: 2016-10-08
+ *********************************/
+
+ @import './../partials/_base-mobile';
+
+$vertical-spacer: 25px;
+$gutter: 15px;
+
+body {
+    background-color: #32017f;
+}
+
+/* Modified from the base */
+.content-container {
+    overflow-y: scroll;
+}
+
+.left {
+    margin-left: $gutter;
+    float: left;
+}
+
+.right {
+    float: right;
+    margin-right: $gutter;
+}
+
+.title {
+    height: 50px;
+    width: 165px;
+
+    margin: {
+        top: 10px;
+        bottom: 10px;
+        left: $gutter;
+    }
+
+    div#text-contact {
+        border-radius: 5px;
+        padding: {
+            left: 9px;
+            top: 5px;
+        }
+        width: 130px;
+        color: #ff71fc;
+        background-color: #3ffca2;
+        font: {
+            size: 30px;
+            weight: $bold;
+        }
+        // Inverts Colors
+        &:hover {
+            color: #3ffca2;
+            background-color: #ff71fc;
+        }
+
+    }
+
+    div#text-education {
+        background-color: #6ca0d6;
+        border-radius: 5px;
+        padding: {
+            left: 10px;
+            top: 5px;
+        }
+        color: #f0cf45;
+        font: {
+            size: 30px;
+            weight: $bold;
+        }
+        &:hover {
+            color: #6ca0d6;
+            background-color: #f0cf45;
+        }
+    }
+
+    div#text-computer {
+        border-radius: 5px;
+        padding: {
+            left: 9px;
+            top: 5px;
+        }
+        width: 242px;
+        color: #a9d0ea;
+        background-color: #e13641;
+        font: {
+            size: 30px;
+            weight: $bold;
+        }
+        &:hover {
+            color: #e13641;
+            background-color: #a9d0ea;
+        }
+    }
+
+    div#text-experience {
+        border-radius: 5px;
+        padding: {
+            left: 9px;
+            top: 5px;
+        }
+        width: 172px;
+        color: #fdfeef;
+        background-color: #231f20;
+        font: {
+            size: 30px;
+            weight: $bold;
+        }
+        &:hover {
+            color: #231f20;
+            background-color: #fdfeef;
+        }
+    }
+
+    div#text-organizations {
+        border-radius: 5px;
+        padding: {
+            left: 9px;
+            top: 5px;
+        }
+        width: 215px;
+        color: #42b350;
+        background-color: #93d9dc;
+        font: {
+            size: 30px;
+            weight: $bold;
+        }
+        &:hover {
+            color: #93d9dc;
+            background-color: #42b350;
+        }
+    }
+
+}
+
+
+.timeline {
+    display: inline-block;
+    font-weight: $bold;
+    width: 25%;
+}
+
+.content-row {
+    margin-left: $gutter;
+    width: 100%;
+    .content {
+        display: inline-block;
+        vertical-align: top;
+        width: 65%;
+        div#company {
+            display: inline-block;
+            font-weight: $bold;
+            width: 100%;
+        }
+        div#position {
+            display: inline-block;
+            font-weight: $semi-bold;
+            width: 100%;
+        }
+        ul#responsibilities {
+            margin-top: 0px;
+            li {
+                margin-left: -10px;
+                &:before {
+                    content:"\f00a"; /* FontAwesome Unicode */
+                    font-family: 'Fun';
+                }
+            }
+        }
+    }
+}
+div#resume-wrapper {
+    height: calc(100% - $vertical-spacer);
+    position: relative;
+    padding-top: $vertical-spacer;
+    div#resume-header {
+        /* height + title margins*/
+        height: 150px;
+        border-bottom:{
+            color: $yellow;
+            style: solid;
+            width: 3px;
+        }
+        div#name {
+            font: {
+                size: 22px;
+            }
+        }
+        div#address {
+            font: {
+                size: 16px;
+            }
+        }
+        div#phone {
+            font: {
+                size: 16px;
+            }
+        }
+        div#email {
+            font: {
+                size: 16px;
+            }
+        }
+    }
+
+    div#education {
+        height: 150px;
+        border-bottom:{
+            color: $yellow;
+            style: solid;
+            width: 3px;
+        }
+
+        div#college {
+            height: inherit;
+            margin-left: $gutter;
+
+        }
+    }
+
+    div#computer-skills {
+        height: 230px;
+        border-bottom:{
+            color: $yellow;
+            style: solid;
+            width: 3px;
+        }
+        div#skills {
+            margin-left: $gutter;
+        }
+    }
+
+    div#experience {
+        border-bottom:{
+            color: $yellow;
+            style: solid;
+            width: 3px;
+        }
+    }
+
+    div#organizations {
+        border-bottom:{
+            color: $yellow;
+            style: solid;
+            width: 3px;
+        }
+    }
+
+}

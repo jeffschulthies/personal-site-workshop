@@ -15,7 +15,7 @@ $bold: bold;
 /* Color Palette */
 $blue: #00C9F1;
 $white: #FFFFFF;
-$yellow: #FFC31C;
+$yellow: #F7E154;
 
 /* Variables */
 $header-height: 50px;
@@ -36,6 +36,8 @@ $header-height: 50px;
      */
     display: block;
     font-size: 12px;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
 }
 
 /* Reset table displays */

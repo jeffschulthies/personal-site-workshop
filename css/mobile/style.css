@@ -21,7 +21,9 @@
    *  https://mdn.mozillademos.org/files/13647/box-model-standard-small.png
    */
   display: block;
-  font-size: 12px; }
+  font-size: 12px;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
 
 /* Reset table displays */
 table {
@@ -86,7 +88,7 @@ header {
       padding-left: 10px;
       padding-right: 10px; }
       header nav#nav-top a:hover {
-        color: #FFC31C;
+        color: #F7E154;
         transition: .2s; }
 
 .content-container {
@@ -119,7 +121,7 @@ footer {
       footer nav#nav-bottom a:last-of-type {
         padding-right: 20px; }
       footer nav#nav-bottom a:hover {
-        color: #FFC31C;
+        color: #F7E154;
         transition: .2s; }
 
 /******************** General Elements ********************/
