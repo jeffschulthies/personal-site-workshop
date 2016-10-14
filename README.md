@@ -1,1 +1,3 @@
-# personal-site-workshop
+# Personal Site Workshop
+
+Final repository for a simple static site.
